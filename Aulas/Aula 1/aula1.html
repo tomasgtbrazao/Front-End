@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.18/vue.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="aula1.css" />
+    <script>
+      console.log("asd");
+    </script>
+  </head>
+
+  <body>
+    <div id="app">
+        <p>{{Titulo}}</p>
+        <input v-model="message" placeholder="edit me"/>
+        <p>Message is: {{Message}}</p>
+        <h3>Lista de Tarefas</h3>
+        <input v-model="novatarefa" placeholder="Insira a nova tarefa">
+        <button @click="tarefas.push(novatarefa)">Inserir</button>
+          <ul>
+              <li v-for="tarefa in tarefas">
+                  {{Tarefa}}
+              </li>
+          </ul>
+            <h3>Lista de Produtos</h3>
+          <ul>
+              <li v-for="produto in produtos" v-on:click="colocarativo(produto)" v-bind:class="{'ativo':produto.ativo}">
+                  <span v-if="produto.valor===0">
+                      Sem Produto
+                  </span>
+                    {{Produto.nome}} {{Produto.valor}}
+              </li>
+          </ul>
+    </div>
+  </body>
+
+  <script>
+    const app = new Vue({
+      el: "#app",
+      data: {
+        Titulo: "Hello World",
+        Tarefa:'',
+        Tarefas:['Ler um livro'],
+        Produtos:[{nome:'Agua',valor:1, ativo:false}, {nome:'Queijo', valor:5, ativo:false}, {nome:'Cafe', valor:3, ativo:false}, {nome:'Sabao', valor:0, ativo:false}, {nome:'Sumo', valor:0, ativo:false}]
+      },
+      
+      methods: {
+        colocarativo: function(Produto){
+            Produto.ativo=!Produto.ativo
+        }
+      }
+    });
+  </script>
+</html>
