@@ -1,0 +1,36 @@
+{
+    "beer":[
+        {
+            "nomeBeer":"Coral",
+            "image":"https://viserra.co.uk/4971-large_default/coral-4x6x33cl.jpg"
+        },
+        {
+            "nomeBeer":"Sagres",
+            "image":"https://i.pinimg.com/originals/60/fb/dc/60fbdce8a2033e880d64aba79a6e4a2d.jpg"
+        },
+        {
+            "nomeBeer":"SuperBock",
+            "image":"https://img.bondlayer.com/nh1z4bytud/_assets/ngnjyhr9du7nwnfx8v7cs6.png?auto=format&fit=fill&w=800&h=800"
+        },
+        {
+            "nomeBeer":"Heineken",
+            "image":"https://www.heineken.com/media-eu/01pfxdqq/heineken-original-bottle.png?quality=85"
+        },
+        {
+            "nomeBeer":"Budlight",
+            "image":"https://products1.imgix.drizly.com/ci-bud-light-980728905e40c8af.jpeg?auto=format%2Ccompress&ch=Width%2CDPR&fm=jpg&q=20"
+        },
+        {
+            "nomeBeer":"Skol",
+            "image":"https://abcemcasa.vteximg.com.br/arquivos/ids/308986-1000-1000/Cerveja-Skol-Lata-350-ML.jpg?v=637534871841530000"
+        },
+        {
+            "nomeBeer":"Guinness",
+            "image":"https://media.continente.pt/Sonae.eGlobal.Presentation.Web.Media/media.axd?resourceSearchType=2&resource=ProductId=2599430(eCsf$RetekProductCatalog$MegastoreContinenteOnline$Continente)&siteId=1&channelId=1&width=512&height=512&defaultOptions=1"
+        },
+        {
+            "nomeBeer":"Bavaria",
+            "image":"https://sc04.alicdn.com/kf/UTB8vyvdjYPJXKJkSafSq6yqUXXak.jpg"
+        }
+    ]
+}
