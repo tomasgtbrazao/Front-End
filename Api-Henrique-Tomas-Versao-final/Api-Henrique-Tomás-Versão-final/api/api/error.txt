@@ -1,0 +1,121 @@
+<template>
+<div :style="image" class="image">
+    <div class="container">
+      <div class="bubbles">
+        <div class="b1"></div>
+        <div class="b2"></div>
+        <div class="b3"></div>
+      </div>
+      <div class="cup">
+        <div class="drink"></div>
+        <div class="handle"></div>
+      </div>
+</div>
+</div>
+
+</template>
+
+<style>
+
+body,
+html {
+  padding: 0;
+  margin: 0;
+  height: 100%;
+}
+
+.background {
+  background: #282d41;
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.cup {
+  height: 60px;
+  width: 55px;
+  background-color: transparent;
+  border: white 5px solid;
+  border-radius: 10px;
+  border-top: transparent;
+  padding-top: -100%;
+  /* meter imagem */
+}
+.handle {
+  height: 20px;
+  width: 10px;
+  position: relative;
+  background: transparent;
+  border: 5px white solid;
+  border-radius: 0px 10px 10px 0px;
+  right: -55px;
+  top: -45px;
+}
+
+.drink {
+  position: relative;
+  left: 0.1px;
+  top: 3px;
+  width: 45px;
+  height: 56px;
+  background-color: #efb006;
+  border-radius: 5px;
+}
+
+.b1 {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border: 2px white solid;
+  border-radius: 100%;
+  top: -50px;
+  left: 20px;
+}
+
+.b2 {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border: 2px white solid;
+  border-radius: 100%;
+  top: -70px;
+  left: 40px;
+}
+
+.b3 {
+  position: relative;
+  width: 5px;
+  height: 5px;
+  background-color: transparent;
+  border: 2px white solid;
+  border-radius: 100%;
+  top: -50px;
+  left: 30px;
+}
+
+
+.image {
+ background-repeat: no-repeat;
+ background-size: cover;
+}
+
+</style>
+
+<script>
+    export default {
+        data() {
+            return {
+                image: {backgroundImage: "url('https://wallpapercave.com/wp/wp2685294.jpg')"},
+                email: '',
+                password: '',
+
+            };
+        },
+}
+</script>

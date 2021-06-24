@@ -1,0 +1,111 @@
+<template>
+    
+<!-- <v-container :style="image" class="image"> -->
+
+<div :style="image" class="image">
+    <div class="middle">
+
+    <v-container class="altura">
+                <v-card :style="imagecard">
+                    <v-card-title primary-title>
+                    <h4 class="centro branco" >Login</h4>
+                    </v-card-title>
+                    <v-form>
+                    <v-text-field  dark name="Email" label="Email" v-model="email"></v-text-field>
+                    <v-text-field  dark name="Password" label="Password" type="password" v-model="password"></v-text-field>
+
+                    <v-card-actions>
+                    <v-btn primary large block @click="login()">Login</v-btn>
+                    </v-card-actions>
+
+                    <v-card-actions>
+                    <v-btn primary large block to="/Register">Register
+                    </v-btn>
+                    </v-card-actions>
+
+                    </v-form>
+                </v-card>
+    </v-container>
+    </div>
+</div>
+
+<!-- </v-container> -->
+
+</template>
+
+
+<style>
+    .image-card{
+        /* background-image: url(''); */
+        /* background-repeat: no-repeat;
+        background-size: cover; */
+        background-color: #c9cfc9;
+    }
+
+    .middle{
+        display: flex;
+        justify-content: center;
+        height: 100%;
+        padding-top: 50px;
+    }
+
+    .centro{
+          text-align: center;
+        /* padding-left: 190px; */
+    }
+
+    .altura{
+        width: 500px;
+
+    }
+
+    .image {
+        height: 900px;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .name{
+        color: white;
+    }
+
+    /* .background{
+      background-image: url('https://wallpapercave.com/wp/wp2685294.jpg'); 
+      background-repeat: no-repeat;
+      background-attachment: fixed;
+      background-size: 100% 100%;
+    } */
+</style>
+
+<script>
+import firebase from "firebase";
+    export default {
+        data() {
+            return {
+                image: {backgroundImage: "url('https://wallpapercave.com/wp/wp2685294.jpg')"},
+                email: '',
+                password: '',
+                imagecard: {backgroundImage: "url('https://wallpapercave.com/wp/wp2685294.jpg')"},
+
+            };
+        },
+
+        methods: {
+            login(){
+                firebase.auth().signInWithEmailAndPassword(this.email, this.password)
+                    .then((userCredential) => {
+                        // Signed in
+                        var user = userCredential.user;
+                         console.log(user);
+                         this.$router.push('/Produto');
+                        // ...
+                    })
+                    .catch((error) => {
+                        var errorCode = error.code;
+                        var errorMessage = error.message;
+                        console.log(errorCode +errorMessage );
+                    });
+            }
+        }
+    };
+</script>
